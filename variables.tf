@@ -24,6 +24,7 @@ variable "containers" {
             memory          = 2048
             cores           = 2
             tags            = "tofu"
+            unprivileged    = true
         }
     ]
 }

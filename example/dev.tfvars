@@ -10,6 +10,7 @@ containers = [
         memory = 2048
         cores  = 2
         tags   = "tofu"
+        unprivileged = true
     },
     { 
         name = "container-1", 
@@ -22,6 +23,8 @@ containers = [
         memory = 2048
         cores  = 2
         tags   = "tofu"
+        unprivileged = true
     }
 ]
 environment       = "dev"
+default_password  = "LXCChangeMe"
