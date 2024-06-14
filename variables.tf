@@ -9,6 +9,7 @@ variable "containers" {
     network_bridge = string
     memory = number
     cores  = number
+    unprivileged = bool
 
   }))
 }
