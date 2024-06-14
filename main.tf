@@ -20,5 +20,5 @@ resource "proxmox_lxc" "container" {
     bridge = each.value.network_bridge
     ip     = "dhcp"
   }
-  tags = "terraform;${var.environment}"
+  tags = "${var.environment};${each.value.tags}"
 }

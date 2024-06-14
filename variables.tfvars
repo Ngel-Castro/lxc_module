@@ -9,6 +9,7 @@ containers = [
         network_bridge = "vmbr0"
         memory = 2048
         cores  = 2
+        tags   = "tofu"
     },
     { 
         name = "container-1", 
@@ -20,6 +21,7 @@ containers = [
         network_bridge = "vmbr0"
         memory = 2048
         cores  = 2
+        tags   = "tofu"
     }
 ]
 environment       = "dev"
