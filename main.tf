@@ -8,7 +8,7 @@ resource "proxmox_lxc" "container" {
   swap          = 512
   memory        = each.value.memory
   cores          = each.value.cores
-  unprivileged  = true
+  unprivileged  = each.value.unprivileged
   rootfs {
     storage = each.value.storage
     size    = each.value.storage_size
