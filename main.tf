@@ -38,6 +38,8 @@ resource "proxmox_lxc" "container" {
     name   = "eth0"
     bridge = each.value.network_bridge
     ip     = each.value.ip
+    gw   = each.value.gw
   }
   tags = "${var.environment};${each.value.tags}"
+
 }

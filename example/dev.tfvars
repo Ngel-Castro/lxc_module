@@ -28,6 +28,7 @@ containers = [
         unprivileged = true
         ip              = "192.168.0.201/24"
         vmid            = 201
+        gw              = "192.168.0.1"
     }
 ]
 environment       = "dev"

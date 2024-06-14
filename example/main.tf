@@ -1,5 +1,5 @@
 module "lxc_containers" {
-  source = "github.com/Ngel-Castro/lxc_module?ref=stable"
+  source = "github.com/Ngel-Castro/lxc_module?ref=test"
 
   # Pass in required variables
     proxmox_host            = var.proxmox_host

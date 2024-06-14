@@ -13,6 +13,7 @@ variable "containers" {
         tags = string
         ip   = string
         vmid = number
+        gw   = string
     }))
     default = [
         {
@@ -29,6 +30,7 @@ variable "containers" {
             unprivileged    = true
             ip              = "192.168.0.200/24"
             vmid            = 200
+            gw              = "192.168.0.1"
         }
     ]
 }

@@ -11,6 +11,9 @@ variable "containers" {
         cores  = number
         unprivileged = bool
         tags = string
+        ip   = string
+        vmid = number
+        gw   = string
     }))
     default = [
         {
