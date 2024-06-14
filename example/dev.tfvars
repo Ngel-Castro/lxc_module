@@ -13,6 +13,7 @@ containers = [
         unprivileged = true
         ip              = "192.168.0.200/24"
         vmid            = 200
+        gw              = "192.168.0.1"
     },
     { 
         name = "container-1", 
