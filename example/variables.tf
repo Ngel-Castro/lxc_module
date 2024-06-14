@@ -25,6 +25,8 @@ variable "containers" {
             cores           = 2
             tags            = "tofu"
             unprivileged    = true
+            ip              = "192.168.0.200/24"
+            vmid            = 200
         }
     ]
 }

@@ -11,6 +11,8 @@ variable "containers" {
         cores  = number
         unprivileged = bool
         tags = string
+        ip   = string
+        vmid = number
     }))
     default = [
         {
@@ -25,6 +27,8 @@ variable "containers" {
             cores           = 2
             tags            = "tofu"
             unprivileged    = true
+            ip              = "192.168.0.200/24"
+            vmid            = 200
         }
     ]
 }

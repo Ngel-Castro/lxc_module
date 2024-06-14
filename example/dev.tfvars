@@ -11,6 +11,8 @@ containers = [
         cores  = 2
         tags   = "tofu"
         unprivileged = true
+        ip              = "192.168.0.200/24"
+        vmid            = 200
     },
     { 
         name = "container-1", 
@@ -24,6 +26,8 @@ containers = [
         cores  = 2
         tags   = "tofu"
         unprivileged = true
+        ip              = "192.168.0.201/24"
+        vmid            = 201
     }
 ]
 environment       = "dev"

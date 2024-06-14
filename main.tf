@@ -19,6 +19,7 @@ provider "proxmox" {
 resource "proxmox_lxc" "container" {
   for_each = { for idx, container in var.containers : idx => container }
   
+  vmid          = each.value.vmid
   hostname      = "${each.value.name}-${var.environment}"
   target_node   = each.value.target_node
   ostemplate    = each.value.template_name
@@ -36,7 +37,7 @@ resource "proxmox_lxc" "container" {
   network {
     name   = "eth0"
     bridge = each.value.network_bridge
-    ip     = "dhcp"
+    ip     = each.value.ip
   }
   tags = "${var.environment};${each.value.tags}"
 }
