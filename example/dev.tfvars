@@ -16,7 +16,7 @@ containers = [
         gw              = "192.168.0.1"
     },
     { 
-        name = "container-1", 
+        name = "container-2", 
         target_node = "proxmox", 
         storage = "Kingstone-data",
         storage_size = "10G",
