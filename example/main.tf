@@ -7,4 +7,5 @@ module "lxc_containers" {
     proxmox_token_secret    = var.proxmox_token_secret
     containers              = var.containers
     environment             = var.environment
+    default_password        = var.default_password
 }
