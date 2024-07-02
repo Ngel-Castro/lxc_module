@@ -1,5 +1,5 @@
 module "lxc_containers" {
-  source = "github.com/Ngel-Castro/lxc_module?ref=alpha"
+  source = "github.com/Ngel-Castro/lxc_module?ref=stable"
 
   # Pass in required variables
     proxmox_host            = var.proxmox_host
@@ -8,4 +8,7 @@ module "lxc_containers" {
     containers              = var.containers
     environment             = var.environment
     default_password        = var.default_password
+    public_key_encryption   = var.public_key_encryption
+    public_key              = var.public_key
+
 }

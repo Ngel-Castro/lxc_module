@@ -41,5 +41,9 @@ resource "proxmox_lxc" "container" {
     gw   = each.value.gw
   }
   tags = "${var.environment};${each.value.tags}"
+  
+  ssh_public_keys = <<-EOT
+    ${var.public_key_encryption} ${var.public_key} root@localhost
+  EOT
 
 }
