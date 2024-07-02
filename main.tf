@@ -24,7 +24,7 @@ resource "proxmox_lxc" "container" {
   target_node   = each.value.target_node
   ostemplate    = each.value.template_name
   password      = var.default_password
-  swap          = 512
+  swap          = (each.value.memory/2)
   memory        = each.value.memory
   cores          = each.value.cores
   unprivileged  = each.value.unprivileged
