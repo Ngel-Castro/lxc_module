@@ -1,19 +1,19 @@
 variable "containers" {
     type = list(object({
         name = string
-        target_node = string
-        storage = string
-        storage_size = string
-        full_clone = bool
-        template_name = string
-        network_bridge = string
-        memory = number
-        cores  = number
-        unprivileged = bool
-        tags = string
-        ip   = string
-        vmid = number
-        gw   = string
+        target_node     = string
+        storage         = string
+        storage_size    = string
+        full_clone      = bool
+        template_name   = string
+        network_bridge  = string
+        memory          = number
+        cores           = number
+        unprivileged    = bool
+        tags            = string
+        ip              = optional(string, "dhcp")
+        vmid            = optional(number, null)
+        gw              = optional(string, null)
     }))
     default = [
         {
