@@ -33,6 +33,7 @@ resource "proxmox_lxc" "container" {
     size    = each.value.storage_size
   }
   start         = true
+  nameserver = var.dns
 
   network {
     name   = "eth0"
